@@ -34,7 +34,7 @@ public class Pizza {
             this.topingprice = 120;
         }
         this.cheeseprice = 80;
-        this.bill += "Base Price Of The Pizza:"+this.price+"\n";
+        this.bill += "Base Price Of The Pizza: "+this.price+"\n";
     }
     public int getPrice(){
         return this.price;
@@ -43,31 +43,32 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         if(!isCheese){
-            this.isCheese = true;
             this.price = this.price + cheeseprice;
+            this.isCheese = true;
         }
     }
 
     public void addExtraToppings(){
         // your code goes here
         if(!isToppings){
-            this.isToppings = true;
             this.price = this.price + topingprice;
+            this.isToppings = true;
         }
     }
 
     public void addTakeaway(){
         // your code goes here
         if(!isTakeaway){
-            isTakeaway = true;
             this.price += 20;
+            isTakeaway = true;
         }
 
     }
 
     public String getBill(){
         // your code goes here
-        if(!isBillGenerated){
+        if( !isBillGenerated ){
+
             if(isCheese){
                 this.bill += "Extra Cheese Added: "+this.cheeseprice+"\n";
             }
@@ -80,10 +81,10 @@ public class Pizza {
             this.bill += "Total Price: "+this.price+"\n";
 
             isBillGenerated = true;
+
         }
-
-
-
         return this.bill;
     }
 }
+
+
